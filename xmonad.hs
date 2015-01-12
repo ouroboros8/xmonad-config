@@ -137,9 +137,11 @@ myXMonadBar = intercalate ""
     , " -e 'button2='"
     ]
 
+lua_path = "LUA_PATH='/home/dan/.xmonad/lua/?.lua;/home/dan/.xmonad/lua/lib/?.lua'"
+
 myConkyStatusBar = intercalate ""
     -- First we need to set the lua path so that my lua scripts work
-    [ "LUA_PATH=/home/dan/.xmonad/lua_lib/?.lua"
+    [ lua_path
     -- then run conky
     , " conky -c /home/dan/.xmonad/conky_status 2> .xmonad/conky_status_err.log"
     -- pipe conky to dzen
@@ -158,7 +160,7 @@ myConkyStatusBar = intercalate ""
     ]
 
 myConkySysBar = intercalate ""
-    [ "LUA_PATH=/home/dan/.xmonad/lua_lib/?.lua"
+    [ lua_path
     , " conky -c /home/dan/.xmonad/conky_sysbar 2> .xmonad/conky_sys_err.log"
     , " | dzen2"
     , " -x '0' -y '768'"
