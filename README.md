@@ -35,8 +35,8 @@ repo from where you forked it to:
 $ git clone https://github.com/<your_username>/xmonad-config .xmonad
 ```
 
-Once you've cloned the repo (remember to fork it first!), you'll need to do a
-couple more things. Firstly, link the xinitrc file to ~/.xinitrc
+Once you've cloned the repo, you'll need to do a couple more things. Firstly,
+link the xinitrc file to ~/.xinitrc
 ```bash
 $ ln -s ~/.xmonad/xinitrc ~/.xinitrc
 ```
