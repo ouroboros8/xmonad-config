@@ -1,0 +1,15 @@
+background yes
+out_to_console yes
+pad_percents 2
+# Update interval in seconds
+update_interval 1
+
+lua_load /home/dan/devel/conky_dzen_applets/applets.lua 
+
+TEXT
+  ^fg(\#8ec07c)\
+  ^i(/home/dan/.xmonad/dzen2/wifi_02.xbm)^fg()  ${wireless_link_bar 1 10 wlp2s0}\
+  ^fg(\#ebdbb2)|  ${lua_parse conky_battery {chargecolor=#98971a, highcolor=#83a598\
+, lowcolor=#fb4934, ac_icon_color=#b8bb26, no_ac_icon_color=#fabd2f}}\
+  ^fg(\#ebdbb2)|  ^fg(\#d79921)${time %a, %d-%m-%Y}\
+  ^fg(\#ebdbb2)|  ^fg(\#fabd2f)${time %R}^fg(\#ebdbb2)^fg(\#7c6f64):${time %S}  

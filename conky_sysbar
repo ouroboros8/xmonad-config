@@ -1,0 +1,15 @@
+background yes
+out_to_console yes
+out_to_x no
+pad_percents 2
+# Update interval in seconds
+update_interval 1
+
+lua_load ~/devel/conky_dzen_applets/applets.lua
+ 
+TEXT
+  ^i(/home/dan/.xmonad/dzen2/cpu.xbm) ${lua_parse conky_cpu {lowcolor=#98971a,\
+ mediumcolor=#d79921, highcolor=#fb4934}}% \
+|  ^i(/home/dan/.xmonad/dzen2/mem.xbm) ${memperc}%  \
+|  ^fg(\#bdae93)root:^fg(\#ebdbb2)  ${fs_used_perc /}%  ^fg(\#7c6f64)(${fs_used /})^fg(\#ebdbb2)  \
+|  ^fg(\#bdae93)/home/:^fg(\#ebdbb2)  ${fs_used_perc /home/}%  ^fg(\#7c6f64)(${fs_used /home/})
