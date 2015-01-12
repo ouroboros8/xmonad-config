@@ -1,5 +1,5 @@
-my-xmonad-config
-================
+xmonad-config
+=============
 
 This is my personal config for xmonad and other components of my desktop
 environment. **As with all personal configs, don't just clone this repo and use
@@ -32,7 +32,7 @@ $ rm -rf .xmonad
 Once you're sure there's no .xmonad folder in your home directory, clone the
 repo from where you forked it to:
 ```bash
-$ git clone https://github.com/<your_username>/my-xmonad-config .xmonad
+$ git clone https://github.com/<your_username>/xmonad-config .xmonad
 ```
 
 Once you've cloned the repo (remember to fork it first!), you'll need to do a
