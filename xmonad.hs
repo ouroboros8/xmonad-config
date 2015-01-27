@@ -5,12 +5,9 @@ import Data.Maybe(fromJust)
 
 import XMonad
 import XMonad.Hooks.DynamicLog -- For printing xmonad info to dzen.
-import XMonad.Util.Run -- Runs system commands
-import XMonad.Hooks.ManageDocks -- 
-import XMonad.Hooks.ManageHelpers --
-import XMonad.Layout.NoBorders
+import XMonad.Util.Run(spawnPipe)
+import XMonad.Hooks.ManageDocks(manageDocks, avoidStruts)
 import XMonad.Util.EZConfig(additionalKeys)
-import XMonad.Actions.CycleWS
 import XMonad.Hooks.FadeInactive(fadeInactiveCurrentWSLogHook)
 
 ---------------------
@@ -187,6 +184,6 @@ main = do
         , borderWidth        = myBorderWidth
         , modMask            = myModMask
         , logHook            = dzenLogHook dzenXMonadBar >> fadeLogHook
-        , layoutHook         = smartBorders $ myLayout
-        , manageHook         = manageDocks <+> (isFullscreen --> doFullFloat) <+> manageHook defaultConfig
+        , layoutHook         = myLayout
+        , manageHook         = manageDocks <+> manageHook defaultConfig
         } `additionalKeys` myKeys
