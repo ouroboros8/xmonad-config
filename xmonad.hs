@@ -1,17 +1,17 @@
 import System.IO
 import Data.List(intercalate) -- for long strings
 import Data.Map
-import Data.Maybe
+import Data.Maybe(fromJust)
 
 import XMonad
-import XMonad.Hooks.DynamicLog
-import XMonad.Util.Run
-import XMonad.Hooks.ManageDocks
-import XMonad.Hooks.ManageHelpers
+import XMonad.Hooks.DynamicLog -- For printing xmonad info to dzen.
+import XMonad.Util.Run -- Runs system commands
+import XMonad.Hooks.ManageDocks -- 
+import XMonad.Hooks.ManageHelpers --
 import XMonad.Layout.NoBorders
 import XMonad.Util.EZConfig(additionalKeys)
-import XMonad.Hooks.FadeInactive
 import XMonad.Actions.CycleWS
+import XMonad.Hooks.FadeInactive(fadeInactiveCurrentWSLogHook)
 
 ---------------------
 -- Basic behaviour --
